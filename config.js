@@ -2,9 +2,11 @@
 const CONFIG = {
   imageFolder: 'serafufu_images/',
   images: [
-    'serafufu_set5.jpg',
-    'serafufu_set6.png',
-    'serafufu_set7.png',
+    'serafufu_set1.png',
+    'serafufu_set2.png',
+    'serafufu_set3.png',
+    'serafufu_set4.png',
+    'serafufu_set5.png',
   ],
   chibiImage: 'loading/Chibi_sera.png',
   visibleDuration: 13000,
