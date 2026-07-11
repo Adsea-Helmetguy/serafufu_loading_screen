@@ -1,0 +1,162 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  user-select: none;
+}
+
+/* Background image container to handle full-width alignment and scaling */
+.bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: #000;
+  z-index: 1;
+}
+
+.bg-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+/* When active/visible */
+.bg-image.visible {
+  opacity: 1;
+}
+
+/* Grayscale/Contrast filter to give a comic/Skullgirls aesthetic */
+.bw-filter {
+  filter: grayscale(100%) contrast(150%) brightness(85%);
+}
+
+/* Diagonal Halftone Overlay for a comic book / game look */
+.screen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 6px,
+    rgba(255, 255, 255, 0.02) 6px,
+    rgba(255, 255, 255, 0.02) 12px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Dark vignette for high-contrast depth */
+.vignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 30%, rgba(0, 0, 0, 0.85) 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Loading Widget Container */
+.loading-wrapper {
+  position: absolute;
+  bottom: 40px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 24px;
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+}
+
+.loading-text {
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 2px 2px 0px #000;
+  margin-right: 2px;
+}
+
+.dot {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 900;
+  color: #ff3366; /* Styled pop accent color */
+  text-shadow: 2px 2px 0px #000;
+  transform: translateY(0);
+  animation: staggerBounce 1.5s infinite cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.chibi-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  transform: translateY(0);
+  animation: staggerBounce 1.5s infinite cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.chibi-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  /* Dark drop shadow to make the chibi stand out */
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.7));
+}
+
+/* Staggered Bounce Animation Delays */
+.dot-1 {
+  animation-delay: 0s;
+}
+
+.dot-2 {
+  animation-delay: 0.15s;
+}
+
+.dot-3 {
+  animation-delay: 0.3s;
+}
+
+.chibi-wrapper {
+  animation-delay: 0.45s;
+}
+
+/* Keyframes for Staggered Bounce */
+@keyframes staggerBounce {
+  0%, 30%, 100% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-16px);
+  }
+}
