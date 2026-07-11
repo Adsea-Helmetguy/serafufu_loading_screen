@@ -30,19 +30,15 @@ A beautiful, high-contrast, black-and-white stylized loading screen browser sour
 
 ---
 
-## 🎨 Customizing Your Images
+## 🎨 Customizing Your Images (Fully Automated)
 
-1. Place your background images inside the [serafufu_images](file:///home/vboxuser/Desktop/projects/serafufu_loading_screen/serafufu_images) folder.
-2. Open the [config.js](file:///home/vboxuser/Desktop/projects/serafufu_loading_screen/config.js) file in any text editor.
-3. Update the `images` list to match your new filenames:
-   ```javascript
-   images: [
-     'my_cool_art_1.png',
-     'my_cool_art_2.png',
-     'another_drawing.jpg'
-   ]
-   ```
-4. Refresh the Browser Source in OBS to see the changes!
+When the streamer wants to add new art, remove images, or change the current set:
+1. Drag and drop any background image files (PNG, JPG, WebP, etc.) directly into the [serafufu_images](file:///home/vboxuser/Desktop/projects/serafufu_loading_screen/serafufu_images) folder.
+2. Run the update script corresponding to your operating system to automatically update the image list:
+   * **Windows:** Double-click **[update_images.bat](file:///home/vboxuser/Desktop/projects/serafufu_loading_screen/update_images.bat)**.
+   * **macOS / Linux:** Run **[update_images.sh](file:///home/vboxuser/Desktop/projects/serafufu_loading_screen/update_images.sh)** (or run `./update_images.sh` in your terminal).
+3. The script scans the folder and updates [config.js](file:///home/vboxuser/Desktop/projects/serafufu_loading_screen/config.js) in less than a second!
+4. Refresh the Browser Source in OBS to apply the changes.
 
 ---
 

@@ -80,6 +80,18 @@ body, html {
   z-index: 3;
 }
 
+/* Bottom Gradient Overlay (takes up bottom 1/4 of screen) */
+.bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 25vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 100%);
+  pointer-events: none;
+  z-index: 5;
+}
+
 /* Loading Widget Container */
 .loading-wrapper {
   position: absolute;
@@ -89,12 +101,6 @@ body, html {
   align-items: center;
   gap: 6px;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 10px 24px;
-  border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
 }
 
 .loading-text {
