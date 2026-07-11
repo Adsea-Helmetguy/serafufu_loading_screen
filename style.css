@@ -80,14 +80,20 @@ body, html {
   z-index: 3;
 }
 
-/* Bottom Gradient Overlay (takes up bottom 1/4 of screen) */
+/* Bottom Gradient Overlay (covers bottom 1/4 with a dark veil, then fades out) */
 .bottom-overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 25vh;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 40%, rgba(0, 0, 0, 0) 100%);
+  height: 35vh; /* slightly taller so the 50%-to-0% fade is smooth without a harsh line */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,   /* Solid black at bottom edge */
+    rgba(0, 0, 0, 0.8) 40%,    /* Dark transition */
+    rgba(0, 0, 0, 0.5) 71.4%,  /* Exactly 50% opacity at 25vh (1/4 of the screen) */
+    rgba(0, 0, 0, 0) 100%      /* Smoothly blends to fully transparent at the top */
+  );
   pointer-events: none;
   z-index: 5;
 }
