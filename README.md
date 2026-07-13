@@ -1,3 +1,5 @@
+Website Link: https://adsea-helmetguy.github.io/serafufu_loading_screen/
+
 # Skullgirls-Style OBS Loading Screen
 
 A beautiful, high-contrast, black-and-white stylized loading screen browser source for OBS, designed for streamers.
