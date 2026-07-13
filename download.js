@@ -1,7 +1,7 @@
 // download.js
 // Downloads the packaged zip file from the project root.
 
-const DOWNLOAD_FILE = 'unedited_loading_screen.zip';
+const DOWNLOAD_FILE = 'serafufu_loading_set.zip';
 
 function downloadZipFile() {
   const btn = document.getElementById('download-btn');

@@ -12,7 +12,7 @@ const CONFIG = {
     'serafufu_set7.png', 
     'serafufu_set9.png', 
   ], 
-  chibiImage: 'loading/Chibi_sera.png', 
+  chibiImage: 'loading/loading.png', 
   visibleDuration: 13000, 
   invisibleDuration: 2000, 
   enableBWFilter: false 

@@ -16,13 +16,13 @@ echo "  images: [" >> "$CONFIG_FILE"
 for file in serafufu_images/*; do
     filename=$(basename "$file")
     # Check if it is a file and not the Chibi character or directory
-    if [ -f "$file" ] && [ "$filename" != "Chibi_sera.png" ]; then
+    if [ -f "$file" ] && [ "$filename" != "loading.png" ]; then
         echo "    '$filename'," >> "$CONFIG_FILE"
     fi
 done
 
 echo "  ]," >> "$CONFIG_FILE"
-echo "  chibiImage: 'loading/Chibi_sera.png'," >> "$CONFIG_FILE"
+echo "  chibiImage: 'loading/loading.png'," >> "$CONFIG_FILE"
 echo "  visibleDuration: 13000," >> "$CONFIG_FILE"
 echo "  invisibleDuration: 2000," >> "$CONFIG_FILE"
 echo "  enableBWFilter: true" >> "$CONFIG_FILE"

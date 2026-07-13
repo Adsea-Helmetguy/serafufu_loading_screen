@@ -16,13 +16,13 @@ echo   images: [ >> "%CONFIG_FILE%"
 for %%f in (serafufu_images\*) do (
     set "filename=%%~nxf"
     :: Ignore index files, chibi character or hidden files if they end up here
-    if not "%%~nxf"=="Chibi_sera.png" (
+    if not "%%~nxf"=="loading.png" (
         echo     '%%~nxf', >> "%CONFIG_FILE%"
     )
 )
 
 echo   ], >> "%CONFIG_FILE%"
-echo   chibiImage: 'loading/Chibi_sera.png', >> "%CONFIG_FILE%"
+echo   chibiImage: 'loading/loading.png', >> "%CONFIG_FILE%"
 echo   visibleDuration: 13000, >> "%CONFIG_FILE%"
 echo   invisibleDuration: 2000, >> "%CONFIG_FILE%"
 echo   enableBWFilter: false >> "%CONFIG_FILE%"
