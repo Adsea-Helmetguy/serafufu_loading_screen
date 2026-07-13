@@ -25,7 +25,7 @@ echo   ], >> "%CONFIG_FILE%"
 echo   chibiImage: 'loading/Chibi_sera.png', >> "%CONFIG_FILE%"
 echo   visibleDuration: 13000, >> "%CONFIG_FILE%"
 echo   invisibleDuration: 2000, >> "%CONFIG_FILE%"
-echo   enableBWFilter: true >> "%CONFIG_FILE%"
+echo   enableBWFilter: false >> "%CONFIG_FILE%"
 echo }; >> "%CONFIG_FILE%"
 
 echo.
