@@ -17,6 +17,38 @@ body, html {
   user-select: none;
 }
 
+/* Download button for users who can't code */
+.download-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  z-index: 10;
+  padding: 10px 18px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0px #000;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.download-btn:hover {
+  background: rgba(255, 51, 102, 0.85); /* matches the dot accent color */
+  transform: translateY(-2px);
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+  transform: none;
+}
+
 /* Background image container to handle full-width alignment and scaling */
 .bg-container {
   position: absolute;
