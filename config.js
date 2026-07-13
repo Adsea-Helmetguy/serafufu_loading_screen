@@ -11,5 +11,5 @@ const CONFIG = {
   chibiImage: 'loading/Chibi_sera.png',
   visibleDuration: 13000,
   invisibleDuration: 2000,
-  enableBWFilter: true
+  enableBWFilter: false
 };
